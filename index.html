@@ -2,11 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="google-site-verification" content="aKvmgSwCzuFROu_vdAJBmSz8625Iu9bd8QTP2z_kUuQ" />
-  <meta name="google-site-verification" content="rXaSzm9shVowHv61jcYeuGEsouKW8A4nEifFGsZrDLY" />
-  <title>Jason Snodgrass</title>
+  <title>Method Coatings Color List</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </head>
 <body>
-  Site under construction.....
+  This is a color list.
+  <script>
+    $.ajax({
+      method: 'post'
+      url: 'http://www.prismaticpowders.com/ajax/colors-select?color=0&finish=&query=&limit=20&page=1&featured=0&equipment=0&colorsets=0&twocoat=0&ralcolors=0&discontinued=0',
+      success: function () {
+        console.log('success ', arguments);
+      },
+      error: function () {
+        console.log('error', arguments);
+      }
+    });
+  </script>
 </body>
 </html>
